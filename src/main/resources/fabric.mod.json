@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "brys-magic-swords",
+	"version": "${version}",
+	"name": "Bry's Magic Swords",
+	"description": "Adds vanilla like magical swords to Minecraft!",
+	"authors": [
+		"Bryson Ellalasingham"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/brys-magic-swords/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"me.bry.BrysMagicSwords"
+		],
+		"client": [
+			"me.bry.BrysMagicSwordsClient"
+		],
+		"fabric-datagen": [
+			"me.bry.BrysMagicSwordsDataGenerator"
+		]
+	},
+	"mixins": [
+		"brys-magic-swords.mixins.json",
+		{
+			"config": "brys-magic-swords.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.10",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
